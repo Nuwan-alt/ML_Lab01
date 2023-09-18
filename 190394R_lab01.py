@@ -171,6 +171,11 @@ knn_classifier.fit(x_train_trans, y_train[L2])
 y_pred = knn_classifier.predict(x_valid_trans)
 
 y_pred_test_after = knn_classifier.predict(x_test_pca)
+
+"""## Accuracy After Feature Engineering - PCA"""
+print(f"Accuracy: {metrics.accuracy_score(y_valid[L2], y_pred)}")
+print(f"Precision: {metrics.precision_score(y_valid[L2], y_pred, average='weighted')}")
+print(f"Recall: {metrics.recall_score(y_valid[L2], y_pred,average='weighted')}")
 print('Predicted labels after feature engineering:', y_pred_test_after)
 
 output_df = pd.DataFrame({
@@ -188,11 +193,9 @@ output_df.head()
 # Save the DataFrame to the specified CSV file path
 output_df.to_csv(f"190394R_label_2.csv", index=False)
 
-"""## Accuracy After Feature Engineering - PCA"""
 
-print(f"Accuracy: {metrics.accuracy_score(y_valid[L2], y_pred)}")
-print(f"Precision: {metrics.precision_score(y_valid[L2], y_pred, average='weighted')}")
-print(f"Recall: {metrics.recall_score(y_valid[L2], y_pred,average='weighted')}")
+
+
 
 """# Label_3"""
 
