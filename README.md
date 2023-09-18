@@ -1,8 +1,8 @@
 # ML_Lab01
 Feature Extraction
 
-## Used methods 
-* SelectKBest Method
+## Used Methods 
+* SelectKBest 
 * Standard Scaler
 * Principal Component Analysis (PCA)
 
