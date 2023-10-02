@@ -63,7 +63,7 @@ for target_label in LABELS:
   x_valid[target_label] = pd.DataFrame(scaler.transform(vl_df.drop(LABELS, axis = 1)), columns=FEATURES)
   y_valid[target_label] = vl_df[target_label]
 
-  x_test[target_label] = pd.DataFrame(scaler.transform(vl_df.drop(LABELS, axis = 1)), columns=FEATURES)
+  x_test[target_label] = pd.DataFrame(scaler.transform(test_df.drop(LABELS, axis = 1)), columns=FEATURES)
 
 """# Label_1"""
 
